@@ -34,3 +34,7 @@
 Adding Elements to the DOM
 
 1. $('#right-image').clone().appendTo('body')
+
+2.
+
+3. 
