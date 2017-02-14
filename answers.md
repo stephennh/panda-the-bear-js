@@ -4,9 +4,9 @@
 
 2. $('.highlight').text('Stephen')
 
-3.
+3. $('#employment > .info-title').html("<i class=\"icon-suitcase\"></i> &nbsp; Volunteer")
 
-4. $('#time-travel').detach()           ******
+4. $('.bar-default')[2].remove()
 
 5. $('body').css('background-color','cyan')
 
@@ -26,15 +26,25 @@
 
 13. $('form > #submit').attr('value','En garde!')
 
-  1.
+  1. $('#submit').attr('disabled','true')
 
-  2.
+  2. $('.bio-info').empty()
 
 
 Adding Elements to the DOM
 
-1. $('#right-image').clone().appendTo('body')
+1. $('#right-image').clone().appendTo('form')
 
-2.
+2. for (var i=0; i<10; i++) { $('#right-image img').clone().insertAfter('form') }
 
-3. 
+3. var listItem = document.createElement('li');
+   var leftSpan = document.createElement('span');
+   var lastUpdated = document.createTextNode('Page last updated on');
+   var rightSpan = document.createElement('span');
+   var currentDate = document.createTextNode(Date());
+   leftSpan.appendChild(lastUpdated);
+   rightSpan.appendChild(currentDate);
+   listItem.appendChild(leftSpan);
+   listItem.appendChild(rightSpan);
+
+   $('.bio-info').append(listItem)
